@@ -1,0 +1,64 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Demo API",
+        "description": "A simple Demo API for Testing Purpose"
+    },
+    "schemes": [
+        ""
+    ],
+    "host": "localhost:3000",
+    "basePath": "/",
+    "paths": {
+        "/students": {
+            "post":{
+                "summary": "Add students",
+                "description": "POST students Records.",
+                "responses": {
+                    "200": {
+                        "description": "Post Students Data",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "phone": {
+                                        "type": "string"
+                                    }
+                                   
+                                }
+                            }
+                        }
+                    }
+                } 
+            },
+            "get": {
+                "summary": "Gets some students",
+                "description": "Returns a list containing all students.",
+                "responses": {
+                    "200": {
+                        "description": "A list of Students",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "phone": {
+                                        "type": "string"
+                                    }
+                                   
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+       
+        }
+    }
+}
